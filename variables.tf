@@ -7,3 +7,8 @@ variable "name" {
   type        = string
   description = "The bucket’s name"
 }
+
+variable "storageClass" {
+  type         = string
+  desctription = "Storage class to use in the ObjectBucketClaim"
+}

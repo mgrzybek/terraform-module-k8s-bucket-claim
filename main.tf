@@ -8,7 +8,7 @@ resource "kubernetes_manifest" "bucket" {
     }
     "spec" = {
       "generateBucketName" = var.name
-      "storageClassName"   = "openshift-storage.noobaa.io"
+      "storageClassName"   = var.storageClass
     }
   }
 }
