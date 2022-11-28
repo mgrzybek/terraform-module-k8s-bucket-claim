@@ -14,6 +14,7 @@ resource "kubernetes_manifest" "bucket" {
 }
 
 data "kubernetes_config_map" "configmap" {
+  depends_on = [kubernetes_manifest.bucket]
   metadata {
     name      = var.name
     namespace = var.namespace
@@ -21,6 +22,7 @@ data "kubernetes_config_map" "configmap" {
 }
 
 data "kubernetes_secret" "secret" {
+  depends_on = [kubernetes_manifest.bucket]
   metadata {
     name      = var.name
     namespace = var.namespace

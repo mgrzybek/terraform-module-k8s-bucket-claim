@@ -9,6 +9,6 @@ variable "name" {
 }
 
 variable "storageClass" {
-  type         = string
-  description  = "Storage class to use in the ObjectBucketClaim"
+  type        = string
+  description = "Storage class to use in the ObjectBucketClaim"
 }
